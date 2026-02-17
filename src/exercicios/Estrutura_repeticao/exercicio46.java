@@ -1,4 +1,4 @@
-package exercicios.Switch;
+package exercicios.Estrutura_repeticao;
 
 import java.util.Scanner;
 

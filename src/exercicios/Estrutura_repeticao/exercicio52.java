@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.Estrutura_repeticao;
 
 public class exercicio52 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package exercicios.Switch;
+package exercicios.Estrutura_repeticao;
 
 public class exercicio49 {
     public static void main(String[] args) {

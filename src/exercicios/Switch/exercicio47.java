@@ -1,4 +1,4 @@
-package exercicios;
+package exercicios.Switch;
 
 public class exercicio47 {
     public static void main(String[] args) {

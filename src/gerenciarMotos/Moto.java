@@ -14,6 +14,7 @@ public class Moto {
     }
 
     public void getMotoCadastrada(){
+        System.out.println("=====================");
         System.out.println("Modelo da moto cadastrada: " + modelo);
         System.out.println("Quilometragem da moto: " + quilometragemAtual);
     }

@@ -29,11 +29,14 @@ public class GerenciadorMotos {
                     System.out.println("Digite a quilometragem: ");
                     double quilometragem = scanner.nextDouble();
                     Moto cadastroMoto = new Moto(modelo, quilometragem);
-                    cadastroMoto.getMotoCadastrada();
+                    System.out.println("Moto cadastrada com sucesso");
                     frota.add(cadastroMoto);
                     break;
                  case 2:
-                    System.out.println("Cadastrando moto");
+                    System.out.println("Listando motos");
+                    for(Moto moto : frota){
+                        moto.getMotoCadastrada();
+                    }
                     break;
                 default:
                     break;

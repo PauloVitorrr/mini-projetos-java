@@ -17,5 +17,20 @@ public class Moto {
         System.out.println("=====================");
         System.out.println("Modelo da moto cadastrada: " + modelo);
         System.out.println("Quilometragem da moto: " + quilometragemAtual);
+        if(totalLitrosAbastecidos > 0 && totalkmRodados > 0){
+            System.out.println("Total de litros abastecidos" + totalLitrosAbastecidos);
+            System.out.println("Total de km rodados" + totalkmRodados);
+        }
+    }
+
+    public String getModelo(){
+        return modelo;
+    }
+
+    public void abastecer(double litros, double kmRodados){
+        this.totalLitrosAbastecidos += litros;
+        this.totalkmRodados += kmRodados;
+        System.out.println("Estou abastecendo " + litros + " Litros");
+        System.out.println("Finalizando o abastecimento");
     }
 }

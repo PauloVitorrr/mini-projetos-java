@@ -38,6 +38,24 @@ public class GerenciadorMotos {
                         moto.getMotoCadastrada();
                     }
                     break;
+                 case 3:
+                    scanner.nextLine();
+                    System.out.println("Digite o modelo da moto que deseja abastecer");
+                    String modeloPesquisa = scanner.nextLine();
+                    for(Moto moto : frota){
+                        if(modeloPesquisa.equalsIgnoreCase(moto.getModelo())){
+                            System.out.println("Digite a quantidade de litros para abastecer");
+                            double litros =  scanner.nextDouble();
+                            System.out.println("Digite a quantidade de km rodados");
+                            double kmRodados = scanner.nextDouble();
+                            moto.abastecer(litros, kmRodados);
+                            break;
+                        }
+                        if(modeloPesquisa != moto.getModelo()){
+                            System.out.println("Moto não encontrada");
+                            break;
+                        }
+                    }
                 default:
                     break;
             }

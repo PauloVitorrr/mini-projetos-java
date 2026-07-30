@@ -30,7 +30,17 @@ public class Moto {
     public void abastecer(double litros, double kmRodados){
         this.totalLitrosAbastecidos += litros;
         this.totalkmRodados += kmRodados;
+        this.quilometragemAtual += kmRodados;
         System.out.println("Estou abastecendo " + litros + " Litros");
         System.out.println("Finalizando o abastecimento");
+        System.out.println("O consumo médio é: " + calcularConsumoMedio());
+    }
+
+    public double calcularConsumoMedio(){
+        if (this.totalLitrosAbastecidos == 0){
+            return 0;
+        }
+
+        return this.totalkmRodados / this.totalLitrosAbastecidos;
     }
 }

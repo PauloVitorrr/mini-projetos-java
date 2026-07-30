@@ -5,6 +5,7 @@ public class Moto {
     private double quilometragemAtual;
     private double totalLitrosAbastecidos;
     private double totalkmRodados;
+    private double quilometragemUltimaRevisao = 0;
 
 
     //construtor
@@ -21,6 +22,11 @@ public class Moto {
             System.out.println("Total de litros abastecidos" + totalLitrosAbastecidos);
             System.out.println("Total de km rodados" + totalkmRodados);
         }
+
+        if(precisaRevisao()){
+            System.out.println("Precisa de revisão");
+        }
+
     }
 
     public String getModelo(){
@@ -42,5 +48,18 @@ public class Moto {
         }
 
         return this.totalkmRodados / this.totalLitrosAbastecidos;
+    }
+
+    public void realizarRevisao(){
+        if(precisaRevisao()){
+            this.quilometragemUltimaRevisao = this.quilometragemAtual;
+            System.out.println("Revisão realizada com sucesso");
+        } else {
+            System.out.println("Moto não precisa de revisão;");
+        }
+    }
+
+    public boolean precisaRevisao(){
+        return (this.quilometragemAtual - this.quilometragemUltimaRevisao) >= 5000;
     }
 }

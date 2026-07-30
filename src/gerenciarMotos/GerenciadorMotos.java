@@ -41,10 +41,10 @@ public class GerenciadorMotos {
                  case 3:
                     scanner.nextLine();
                     System.out.println("Digite o modelo da moto que deseja abastecer");
-                    String modeloPesquisa = scanner.nextLine();
+                    String modeloPesquisaAbastecer = scanner.nextLine();
                     boolean achouMoto = false;
                     for(Moto moto : frota){
-                        if(modeloPesquisa.equalsIgnoreCase(moto.getModelo())){
+                        if(modeloPesquisaAbastecer.equalsIgnoreCase(moto.getModelo())){
                             System.out.println("Digite a quantidade de litros para abastecer");
                             double litros =  scanner.nextDouble();
                             System.out.println("Digite a quantidade de km rodados");
@@ -55,6 +55,23 @@ public class GerenciadorMotos {
                         }
                     }
                     if(!achouMoto){
+                        System.out.println("Moto não encontrada");
+                        break;
+                    }
+                    break;
+                 case 4:
+                    scanner.nextLine();
+                    System.out.println("Digite um modelo que quer fazer a revisão: ");
+                    String modeloPesquisaRevisao = scanner.nextLine();
+                    boolean achouMotoRevisao = false;
+                    for(Moto moto : frota){
+                        if(modeloPesquisaRevisao.equalsIgnoreCase(moto.getModelo())){
+                            moto.realizarRevisao();
+                            achouMotoRevisao = true;
+                            break;
+                        }
+                    }
+                    if(!achouMotoRevisao){
                         System.out.println("Moto não encontrada");
                         break;
                     }
